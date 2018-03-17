@@ -1,0 +1,35 @@
+input1:
+S -> Aa | Bb
+A -> Sa | Ab | a
+B -> Ba | Bb | b
+
+input2:
+S -> AB
+A -> a
+B -> b | &
+
+input3:
+S -> aSBa | bB | &
+B -> aBa | & | c
+
+input4:
+S -> CB
+B -> Sa | b
+C -> Bb | Cba
+
+input5:
+S -> E$
+E -> TE'
+E'-> +TE' | &
+T -> FT'
+T' -> *FT' | &
+F -> i | (E)
+
+input6:
+E -> E + T | T  |          E -> T | TE'   |          E -> T | TE'
+T -> T * F | F  | rec.imd. T -> F | FT'   | rec.norm T -> F | FT'
+F -> a          | =======> F -> a         | =======> F -> a
+                |          E'-> +TE' | &  |          E'-> +TE' | &
+				|	       T'-> *FT' | &  |          T'-> *FT' | &
+
+-- Am codificat lambda cu &
